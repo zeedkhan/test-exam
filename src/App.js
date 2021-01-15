@@ -12,6 +12,8 @@ import { Container, makeStyles, Typography } from "@material-ui/core";
 const useStyles = makeStyles({
   header: {
     padding: "1rem",
+    textAlign: "center",
+    fontSize: "2rem",
     backgroundColor: "rgb(236,239,241)",
   },
 });

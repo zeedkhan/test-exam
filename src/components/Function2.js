@@ -35,10 +35,20 @@ const unixTime = (iso) => {
 
 function Function2() {
   return (
-    <div>
-      <p>
-        First:
-        <strong>
+    <div
+      style={{
+        height: "87vh",
+        justifyContent: "center",
+        backgroundColor: "rgb(207,216,220)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <h1 style={{ marginBottom: "50px" }}>Test Convert Form</h1>
+      <div style={{ marginBottom: "50px" }}>
+        <h2>
+          First:
           {date.getDate() +
             "/" +
             (date.getMonth() + 1) +
@@ -48,27 +58,34 @@ function Function2() {
             date.getHours() +
             ":" +
             date.getMinutes()}
-        </strong>
-      </p>
-      <p>
-        Second:
-        <strong>
+        </h2>
+      </div>
+
+      <div style={{ marginBottom: "50px" }}>
+        <h2>
+          Second:
           {date.getDate() +
             " " +
             date.toLocaleString("default", { month: "long" }) +
             " " +
             // Convert to thai year by plus 543
             (date.getFullYear() + 543)}
-        </strong>
-      </p>
-      <p>
-        Third:
-        <strong>{quarter(getMonth)}</strong>
-      </p>
-      <p>
-        Fourth:
-        <strong>{unixTime(date)}</strong>
-      </p>
+        </h2>
+      </div>
+
+      <div style={{ marginBottom: "50px" }}>
+        <h2>
+          Third:
+          {quarter(getMonth)}
+        </h2>
+      </div>
+
+      <div style={{ marginBottom: "50px" }}>
+        <h2>
+          Fourth:
+          {unixTime(date)}
+        </h2>
+      </div>
     </div>
   );
 }
