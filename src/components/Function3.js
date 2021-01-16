@@ -12,19 +12,18 @@ const x8 = [1, 5, 101, 2, 5, 10];
 const x9 = [10, 10, 9];
 
 // Find 2nd biggest number in array
-
-const findMaxArr = (arr) => {
+const findSecondMaxArr = (arr) => {
+  // If array has an index return the first index of array
   if (arr.length === 1) {
     return arr[0];
+    // If array is [] them return null
   } else if (arr.length === 0) {
     return null || "null";
-  } else if (arr.length === 2) {
-    return arr[0];
+    // else use secondMax function
   } else {
     return secondMax(arr);
   }
 };
-
 const secondMax = function (arr) {
   const k = arr;
 
