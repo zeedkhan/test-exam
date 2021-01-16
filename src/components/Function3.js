@@ -11,6 +11,8 @@ const x7 = [35, 5, 3, 2, 5, 100];
 const x8 = [1, 5, 101, 2, 5, 10];
 const x9 = [10, 10, 9];
 
+const tester = x;
+
 // Find 2nd biggest number in array
 const findSecondMaxArr = (arr) => {
   // If array has an index return the first index of array
@@ -39,7 +41,24 @@ const secondMax = function (arr) {
   return spe; // get the 2nd max
 };
 
-console.log(findMaxArr(x3));
+// SECOND FOR FINDING 2nd GREATEST NUMBER
+const findSecondMax = (arr) => {
+  if (arr.length === 0) {
+    return null, "null";
+  } else if (arr.length === 1) {
+    return arr[0];
+  } else {
+    const distinctArray = [...new Set(arr.map((x) => x))];
+    const result = distinctArray
+      .sort((a, b) => a - b)
+      .reverse()
+      .splice(1, 1);
+    return result;
+  }
+};
+
+
+console.log(findMaxArr(tester));
 
 export default function Function3() {
   return (
